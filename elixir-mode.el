@@ -78,13 +78,21 @@
 
 (defvar elixir-attribute-face 'elixir-attribute-face)
 (defface elixir-attribute-face
-  '((t (:inherit font-lock-preprocessor-face)))
+  '((((class color) (min-colors 88) (background light))
+     :foreground "MediumPurple4")
+    (((class color) (background dark))
+     (:foreground "thistle"))
+    (t nil))
   "For use with module attribute tokens."
   :group 'font-lock-faces)
 
 (defvar elixir-atom-face 'elixir-atom-face)
 (defface elixir-atom-face
-  '((t (:inherit font-lock-builtin-face)))
+  '((((class color) (min-colors 88) (background light))
+     :foreground "RoyalBlue4")
+    (((class color) (background dark))
+     (:foreground "light sky blue"))
+    (t nil))
   "For use with atoms & map keys."
   :group 'font-lock-faces)
 
